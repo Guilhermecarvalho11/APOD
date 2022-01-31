@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Inter:wght@400;700;800&family=Nosifer&family=Nunito:wght@400;600&family=Space+Mono:ital@1&family=Special+Elite&family=Zen+Kurenaido&display=swap" rel="stylesheet">
+    <title>APOD</title>
+
+</head>
+<body>
+    <header>
+      <div class="header">
+        <h1>Astronomy Picture of the Day</h1>
+        </div>
+
+    </div>
+  </header>
+
+    <main>
+
+        <div class="info">
+            <label>Selecione a data</label>
+            <input id="input" type="date">
+            <button id="btn">SELECIONAR</button>
+        </div> 
+
+        <div class="corpo">
+              <h1 id="titulo"></h1>
+              <img src="" id="imagem">
+              <iframe src="" id="iframe" ></iframe>
+              <div class="paragrafo">
+              <p id="descricao"></p>
+              <p id="autor"></p>
+              </div>
+
+            </div>
+        <footer>develorper by: Guilherme Carvalho</footer>
+
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>
