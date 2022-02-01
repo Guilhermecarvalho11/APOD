@@ -32,7 +32,7 @@ document.querySelector("#btn").onclick = function() {
     },
 
     error: function(){
-        titulo.text(`Data inválida: Insira uma data de 16/06/1995 até a data de hoje ou foi um erro na API, recarregue a página.`);
+        titulo.text(`Insira uma data de 16/06/1995 até a data de hoje ou não carregou por um erro na API, recarregue a página.`);
         imagem.attr("src", "./img/error404.jpg");
         imagem.css("width", "700px");
         imagem.css("display", "block");
