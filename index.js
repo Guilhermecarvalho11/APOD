@@ -1,24 +1,22 @@
 document.querySelector("#btn").onclick = function() {
+    const titulo = $("#titulo");
+    const descricao = $("#descricao");
+    const imagem = $("#imagem");
+    const iframe = $("#iframe");
+    const autor = $("#autor");
 
     var input = document.querySelector("input").value;
 
     $.ajax({
     url:`https://api.nasa.gov/planetary/apod?api_key=OcZL1me94KWDsvoTYSDGj8Wkigga6YIjftaGpTbP&date=${input}`,
     success: function(response){
-        const titulo = $("#titulo");
-        const descricao = $("#descricao");
-        const imagem = $("#imagem");
-        const iframe = $("#iframe");
-        const autor = $("#autor");
-
         
-        $("#titulo").text(response.title);
-        $("#data").text(response.data);
-        $("#descricao").text(response.explanation);
+        titulo.text(response.title);
+        descricao.text(response.explanation);
         if(response.copyright !== undefined){
-            $("#autor").text(response.copyright);
+            autor.text(response.copyright);
         }else{
-            $("#autor").text(`Autor desconhecido`);
+            autor.text(`Autor desconhecido`);
         }
 
         if(response.media_type == "image"){
@@ -27,14 +25,20 @@ document.querySelector("#btn").onclick = function() {
             document.getElementById("imagem").style.display = "block";
         }else{
             iframe.attr("src", response.url);
-            document.getElementById("imagem").style.display = "block";
-            document.getElementById("iframe").style.display = "none";
+            document.getElementById("imagem").style.display = "none";
+            document.getElementById("iframe").style.display = "block";
         }
         return response;
-    }})
+    },
 
-
-
-    
-   
+    error: function(){
+        titulo.text(`Data inválida: Insira uma data de 16/06/1995 até a data de hoje ou foi um erro na API, recarregue a página.`);
+        imagem.attr("src", "./img/error404.jpg");
+        imagem.css("width", "700px");
+        imagem.css("display", "block");
+        iframe.css("display", "none");
+        descricao.css("display", "none");
+        autor.css("display", "none");
+    },
+})
 } 

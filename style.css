@@ -23,7 +23,7 @@ body{
 
 .info{
     display: grid;
-    margin-left: 171vh;
+    margin-left: 173vh;
     width: 30vh;
     border: solid 1px darkorange;
     border-top: none;
@@ -32,9 +32,12 @@ body{
 
 .header{
     background-image: url("./img/tres.jpg");
-    height: 145px;
-    width: 1349px;
+    height: 130px;
+    width: 1365px;
     border-bottom: solid 2px rgb(255, 140, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #titulo{
@@ -46,7 +49,7 @@ body{
 }
 
 #descricao{
-    font-size: 16px;
+    font-size: 17px;
     margin: 12px;
 }
 
@@ -64,6 +67,16 @@ body{
     grid-row: 2;
     margin-top: 1px;
 }
+
+.rodape{
+    margin-left: 35em;
+    position: absolute;
+    bottom: 0;
+    color: darkorange;
+    height: 3vh;
+}
+
+
 
 h1{
     font-size: 50px;
@@ -83,21 +96,13 @@ h1{
     opacity: none;
 }
 
-img{
+img, iframe{
     border: 1px solid darkorange;;
     width: 700px;
-    height: 420px;
+    height: 390px;
     grid-column: 1;
     grid-row: span 2;
     margin-left: 4rem;
-    display: none;
-}
-
-iframe{
-    border: 1px solid rgb(247, 247, 247);
-    width: 700px;
-    height: 420px;
-    margin-left: 8em;
     display: none;
 }
 
@@ -111,12 +116,9 @@ button{
     cursor: pointer
 }
 
-
-footer{
+label{
     display: flex;
-    justify-content:center;
-    margin-top: 59vh;
-    background-color: black;
-    color: aliceblue;
-    height: 3vh;
+    justify-content: center;
 }
+
+
