@@ -4,6 +4,10 @@ document.querySelector("#btn").onclick = function() {
     const imagem = $("#imagem");
     const iframe = $("#iframe");
     const autor = $("#autor");
+    const footer = $("footer");
+    const h1 = $("h1");
+    const header = $(".header");
+    const info = $(".info");
 
     var input = document.querySelector("input").value;
 
@@ -32,7 +36,16 @@ document.querySelector("#btn").onclick = function() {
     },
 
     error: function(){
-        titulo.text(`Insira uma data de 16/06/1995 até a data de hoje ou não carregou por um erro na API, recarregue a página.`);
+        titulo.text(`ERROR:Insira uma data de 16/06/1995 até a data de hoje ou não carregou por um erro na API, RECARREGUE A PÁGINA PARA TENTAR NOVAMENTE`);
+        titulo.css("border", "dashed","3px");
+        titulo.css("color", "red");
+        imagem.css("borderColor", "red")
+        footer.css("color", "red");
+        h1.css("color", "red");
+        info.css("color", "red");
+        info.css("borderColor", "red");
+        header.css("borderColor", "red");
+        titulo.css("padding", "23px");
         imagem.attr("src", "./img/error404.jpg");
         imagem.css("width", "700px");
         imagem.css("display", "block");
