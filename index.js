@@ -64,7 +64,7 @@ document.querySelector("#btn").onclick = function() {
         h1.css("color", "red");
         info.css("color", "red");
         info.css("borderColor", "red");
-        header.css("borderColor", "red");
+        header.css("boxShadow","none");
         titulo.css("padding", "23px");
         imagem.attr("src", "./img/error404.jpg");
         imagem.css("width", "700px");
