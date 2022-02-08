@@ -38,6 +38,10 @@ document.querySelector("#btn").onclick = function() {
             info.css("color", "darkorange");
             info.css("borderColor", "darkorange");
             header.css("borderColor", "darkorange");
+            descricao.css("display", "block");
+            autor.css("display", "block");
+            titulo.css("border", "none");
+            header.css("boxShadow","darkorange");
         }else{
             iframe.attr("src", response.url);
             document.getElementById("imagem").style.display = "none";
@@ -49,6 +53,10 @@ document.querySelector("#btn").onclick = function() {
             info.css("color", "darkorange");
             info.css("borderColor", "darkorange");
             header.css("borderColor", "darkorange");
+            descricao.css("display", "block");
+            autor.css("display", "block");
+            titulo.css("border", "none");
+            header.css("boxShadow","block");
         }
         return response;
     },
